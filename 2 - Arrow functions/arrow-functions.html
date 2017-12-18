@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow Functions ➡️➡️</title>
+</head>
+<body>
+  <script>
+    const names = ['james', 'lydia', 'angelou'];
+    // normallly
+    const fullNames = names.map(function(name){
+      return `${name} Aduke`;
+    });
+    // console.log(fullNames);
+
+    // rewritten as an arrow function
+    const fullNames2 = names.map((name) =>{
+      return `${name} Chris`
+    });
+    // console.log(fullNames2);
+
+    // taking it even further, if you only have one parameter you can get rid of the parentheses
+    const fullNames3 = names.map(name =>{
+      return `${name} Chris0`
+    });
+    // console.log(fullNames3);
+
+    // implicit return removing the return keyword and deleting the curly braces (not totally sure about this)
+    const fullNames4 = names.map(name => `${name} Chris4`);
+    // console.log(fullNames4);
+
+    // with no arguments
+    const fullNames5 = names.map(() => `Cool james`);
+    // console.log(fullNames5);
+    
+    // // Example of a name function
+    // function sayMyName(name){
+    //   return name
+    // }
+
+    // arrow functions are anonymous functions as they do not have a name unlike name functions above. They can however be stored in a variable for example
+
+    const sayMyName = (name) => {alert(`Hello ${name}`)};
+    sayMyName('James');
+  </script>
+</body>
+</html>
