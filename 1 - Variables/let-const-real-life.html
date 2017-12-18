@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>let and const real world</title>
+</head>
+<body>
+  <script>
+    // Immediately invoked function Expression (IIFE) ensure no leakage of the var varibale into the parent scope
+    // (function () {
+    //   var name = 'james';
+    // })();
+
+    // const and let do not IIFE as they are block scoped functions 
+    {
+      const name = 'james';
+      console.log(name)
+    }
+
+    for (let i = 0; i < 10;  i++) {
+      console.log(i);
+      setTimeout(function() {
+        console.log('The number is ' + i);
+      },1000);      
+    }
+
+  </script>
+</body>
+</html>
