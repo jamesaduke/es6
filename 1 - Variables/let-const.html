@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const key = 'abc123';
+    // const varibles cannot be updated i.e cannot be reassigned, but the properties within it can be changed
+    let points = 50;
+    let winner = false;
+    // let points = 60; let variables cannot be declared twice in the same scope
+    points = 60;
+    // let varibles can be updated;
+
+    // let variables are block({}) scoped
+    if (points > 40) {
+      let winner = true;
+    }
+    // when ran, winner = false
+
+    const person = {
+      name: 'James',
+      age: '20'
+    }
+
+    const james ={age: 20};
+    Object.freeze(james);
+    // Object.freeze makes it imposibble to change object properties
+    
+  </script>
+</body>
+</html>
