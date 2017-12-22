@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+  <script>
+    const person = {
+      name: 'James Aduke',
+      job: 'Web Designer and Developer',
+      city: 'Eldoret',
+      bio: 'James really loves formula 1'
+    };
+
+    // template strings can be used to make multiline strings, HTML fragments
+    const markup = `
+      <div class="person">
+        <h2>
+          ${person.name}
+          <span class="job">${person.job}</span>
+        </h2>
+        <p class="location">${person.city}</p>
+        <p class="bio">${person.bio}</p>
+      </div>
+    `;
+
+    document.body.innerHTML = markup;
+    // console.log(markup);
+
+    // Template strings can be nested inside each other
+
+    const dogs = [
+      { name: 'Rex', age: 5 },
+      { name: 'Snickers', age: 6 },
+      { name: 'Sunny', age: 1 }
+    ];
+
+    const nestMarkup = `
+    <ul class="dogs">
+       ${dogs.map(dog => `<li>${dog.name} is ${dog.age * 7}</li>`).join('')} 
+    </ul>
+    `;
+    document.body.innerHTML = nestMarkup;
+    // console.log(nestMarkup);
+  
+    // using if statements
+
+    const song = {
+      name: 'Dying to live',
+      artist: 'Tupac',
+      featuring: 'Biggie Smalls'
+    }
+
+    const songMarkup = `
+      <div class="song">
+        <p>
+          ${song.name} - ${song.artist}
+        </p>
+      </div>
+    `;
+  </script>
+</body>
+</html>
