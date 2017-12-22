@@ -56,9 +56,38 @@
       <div class="song">
         <p>
           ${song.name} - ${song.artist}
+          ${song.featuring ? `(Featuring ${song.featuring})` : ''}
         </p>
       </div>
     `;
+
+    document.body.innerHTML = songMarkup;
+
+    // using template strings with functions 
+    const beer = {
+      name: 'Tusker lite',
+      brewery: 'East African Breweries limited',
+      keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+    };
+
+    function renderKeywords(keywords){
+      return `
+        <ul class="song">
+          <ul>
+            ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
+            </ul>
+        </ul>
+      `
+    }
+
+    const beerMarkup = `
+      <div class="beer">
+        <h2>${beer.name}</h2>
+        <p class="brewery">${beer.brewery}</p>
+        ${renderKeywords(beer.keywords)}
+      </div>
+    `;
+    document.body.innerHTML = beerMarkup;
   </script>
 </body>
 </html>
