@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tagged templates</title>
+  <style>
+    .hl{
+      background: #ffc600;
+    }
+  </style>
+</head>
+<body>
+  <script>
+  	function highlight (strings, ...values) {
+  		let str = '';
+      strings.map((string, i) => {
+        str += `${string} <span class="hl">${values[i] || ''}</span>`;
+      });
+  		return str;
+  	}
+    const name = 'Rex';
+    const age = '100';
+    const sentence = highlight`My dog's name is ${name} and he is ${age}`;
+
+    document.body.innerHTML = sentence;
+    console.log(sentence);
+  </script>
+</body>
+</html>
