@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New String Methods</title>
+</head>
+<body>
+	<script>
+		const course = 'RFB2';
+		const flightNumber = '20-AC2018-jz';
+		const accountNumber = '825242631RT0001';
+
+		const make = 'BMW';
+		const model = 'x5';
+		const colour = 'royal blue';
+
+		//.startsWith()
+		course.startsWith('RFB'); //true
+		course.startsWith('rfb'); //false .startsWith is case senitive if you need case insensitivity use regex
+		flightNumber.startsWith('AC', 3); //true -- the second argument '3' ignores the first three characters
+
+		// .endsWith
+		flightNumber.endsWith('jz'); //true
+		accountNumber.endsWith('RT', 11)// true -- the second argument 11, only takes the first 11 numbers
+
+		// .includes()
+		flightNumber.includes('AC'); //true
+
+		// .repeat() -- 
+		// code a left pad function using .repeat
+		function leftPad (str, length = 20){
+			return `→ ${' '.repeat(length - str.length)}${str}`;
+		}
+
+
+		console.log(leftPad(make));
+		console.log(leftPad(model));
+		console.log(leftPad(colour));
+		
+	</script>
+</body>
+</html>
