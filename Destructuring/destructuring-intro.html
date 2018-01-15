@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Destructuring!</title>
+</head>
+<body>
+	<script>
+		const person = {
+			first: 'James',
+			last: 'Aduke',
+			country: 'Kenya',
+			city:'Eldoret',
+			twitter: '@aduke44'
+		};
+
+		// destructuring Js expression that allows us to extract data from arrays, objects and maps and sets
+
+		//common way of extracting data
+		// const first = person.first;
+		// const last = person.last;
+
+		// Destructuring
+		const { first, last, twitter } = person;
+
+		const james = {
+			first: 'James',
+			last: 'Aduke',
+			links: {
+				social: {
+					twitter: 'http://twitter.com/aduke44',
+					github: 'http://github.com/jamesaduke'
+				}
+			},
+			web: {
+				blog: 'jamesaduke.com'
+			}
+		};
+
+
+		// Destructuring with nested data and renaming variables
+		const { twitter:tweet, github:git }  = james.links.social;
+
+		// Making deafults with destructuring;
+
+		const settings = {width: 300, color: 'black'}; // but height and fontsize are also needed
+		// const {width = 100, height = 100, colour = 'blue', fontSize = 25} = settings;
+
+		// Object destructuring with variable renaming and default values
+
+		const {w:width = 400, h: height = 500} = {w: 800};
+	</script>
+</body>
+</html>

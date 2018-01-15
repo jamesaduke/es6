@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Destructuring Arrays!</title>
+</head>
+<body>
+<script type="text/javascript">
+	const details = [ 'James Aduke', 444, 'jamesaduke.com'];
+	const [name,id, website] = details;
+
+	// console.log(name, id, website);
+
+	// Destructuring string using the split method
+	const data = 'Basketball,sports,90210, 23, james,ice,cool';
+	const [itemName, category, sku, inventory] = data.split(',');
+
+	const team  = ['wes', 'James', 'harry', 'lewis', 'seb'];
+
+	// using the rest operator(...) gives you the other values in a string if not assigned while destructuring
+	const [captain, assistant, ...players] = team;
+
+	
+
+</script>
+</body>
+</html>
