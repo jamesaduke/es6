@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Iterating and Looping</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const cuts = ['Chuck', 'James', 'Carlton', 'James'];
+
+		// for (let i = 0; i<cuts.length; i++){
+		// 	console.log(cuts[i]);
+		// }
+
+
+		// cuts.forEach(cut => {
+		// 	console.log(cut);
+		// });
+
+
+		// for (const index in cuts){
+		// 	console.log(cuts[index]);
+		// }
+
+		for (const cut of cuts){
+			if (cut === 'James'){
+				break;
+			}
+			console.log(cut);
+		}
+	</script>
+</body>
+</html>
