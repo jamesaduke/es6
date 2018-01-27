@@ -5,12 +5,16 @@
 </head>
 <body>
 	<script>
-		const ages = [32,44,67,98];
+		const ages = [32,19,12,8];
 		// 👵👨 is there at least one adult in the group?
-
+		// .some gets the first piece of data that meets a certain criteria
+		const adultPresent = ages.some(age => age >= 18 );
+		console.log(adultPresent);
 
 		// 🍻 is everyone old enough to drink?
-
+		// .every single data meets a certain criteria
+		const allOldEnough = ages.every(age => age >= 19);
+		console.log(allOldEnough);
 	</script>
 
 </body>
