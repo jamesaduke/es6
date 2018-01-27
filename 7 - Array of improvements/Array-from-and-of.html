@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+	<title>Array .from() and .of() </title>
+</head>
+<body>
+	<div class="people">
+		<p>James</p>
+		<p>cannot</p>
+		<p>Wait</p>
+	</div>
+
+	<script>
+
+		// Array.from is used to convery an arrayish object into an array
+
+		// const people = Array.from(document.querySelectorAll('.people p'));
+		// const names = people.map(person => person.textContent);
+
+		// another way to do this
+		// const people = document.querySelectorAll('.people p');
+		// const peopleArray = Array.from(people, person => {
+		// 	return person.textContent;
+		// });
+
+		function sumAll(){
+			const nums = Array.from(arguments);
+			return nums.reduce((prev, next) => prev + next, 0);
+		}
+
+		sumAll(23,33,55,22,2,33,33,55,33,78);
+
+
+		// Array.of creates argumennst from the argument passed to it
+		const ages = Array.of(12,34,55,64,66);
+		console.log(ages);
+
+	</script>
+</body>
+</html>
