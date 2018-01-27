@@ -178,12 +178,34 @@
      }
   ];
 
-  const post = posts.find(post => {
-  	console.log(post.code);
-  	if(post.code === 'FpTyHQcau'){
-  		return true
-  	}
-  });
+  // .find method in action;
+
+  // const post = posts.find(post => {
+  // 	console.log(post.code);
+  // 	if(post.code === 'FpTyHQcau'){
+  // 		return true;
+  // 	}
+  // 	return false;
+  // });
+
+  // Atlternatively
+  const code = 'FpTyHQcau';
+  const post = posts.find(post => post.code === code);
+  console.log(post);
+
+// .findIndex method when you have an item and want ot find its positon in the array
+	// const postIndex = posts.findIndex(post => {
+	// 	if(post.code === code){
+	// 		return true;
+	// 	}
+	// });
+
+
+	// Alternatively ...
+	const postIndex = posts.findIndex(post => post.code === code);
+	console.log(postIndex);
+console.log(postIndex);
+
 	</script>
 </body>
 </html>
