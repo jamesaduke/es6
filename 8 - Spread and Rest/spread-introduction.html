@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The ...Spread Operator </title>
+</head>
+<body>
+	<script>
+		// Spread operator takes every single item from an array and apply it to the containing element
+		const featured = ['Deep Dish', 'Mandondo', 'Njva'];
+		const speciality = ['Meatzza', 'Margherita', 'Juice'];
+		// what is normally done...
+		// const pizzas = featured.concat(speciality);
+		// console.log(pizzas);
+
+		// with Spread
+		const pizzas = [...featured, 'veg',  ...speciality];
+		// easily make copies of arrays without referencing issues.
+		const fridayPizzas = [...pizzas];
+		console.log(pizzas);
+
+		const deepDish = {
+			pizzaName: 'Deep Dish',
+			size: 'Medium',
+			ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+		};
+	</script>
+</body>
+</html>
