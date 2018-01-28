@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Spread </title>
+</head>
+<body>
+	<script>
+		const inventors = ['Einstein', 'Newton', 'Tesla'];
+		const newInventors = ['Musk', 'Jobs'];	
+		inventors.push(...newInventors);
+		console.log(inventors);
+
+		const name = ['James', 'Aduke'];
+		function sayHi(first, last){
+			alert(`Hey there ${first} ${last}`);
+		}
+
+		sayHi(...name);
+
+	</script>
+</body>
+</html>
