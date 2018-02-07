@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object Literals</title>
+</head>
+<body> 
+	<script type="text/javascript">
+		const first = 'snickers';
+		const last ='Aduke';
+		const age ='2';
+		const breed ='king James IV';
+		const dog = {
+			first,
+			last,
+			age,
+			breed
+		};
+		// console.log(dog);
+
+		// method definitions
+		const modal ={
+			create(selector){
+
+			},
+			open(content){
+
+			},
+			close(goodbye){}
+		};
+
+		// computed property names
+		function invertColor (color) {
+			// body... 
+			return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1), 16)).toString(16)).slice(-6);
+		}
+		const key = 'pocketColor';
+		const value = '#ffc600';
+
+		const tShirt = {
+			[key]: value,
+			[`${key}Opposite`]: invertColor(value)
+		};
+		const keys = ['size', 'color', 'weight' ];
+		const values = ['medium', 'red', 100];
+
+		const shirt = {
+			[keys.shift()]: values.shift(),
+			[keys.shift()]: values.shift(),
+			[keys.shift()]: values.shift()
+		};
+		console.log(shirt);
+	</script>
+</body>
+</html>

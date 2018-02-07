@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The ...Rest Params</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// the rest(...) params does the opposute of spread params it takes multiple items and packs it into a single array
+		function convertCurrency (rate, ...amounts) {
+			return amounts.map(amount => amount * rate);
+		}
+		const amounts = convertCurrency(1.54,  10, 23, 54);
+		// console.log(amounts);	
+
+
+		// in destructuring
+		const runner = ['James Aduke', 123, 5.4, 6.7, 10];
+		const [name, id, ...runs] = runner;
+		console.log(name, id, runs);
+		
+		const team  = ['James', 'Tom', 'Kevin','Mike', 'Sheela'];
+		const [captain, assistant, ...players]= team;
+		console.log(captain, assistant, players);		
+	</script>
+</body>
+</html>
