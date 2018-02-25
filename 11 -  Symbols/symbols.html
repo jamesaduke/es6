@@ -17,9 +17,10 @@
       [Symbol('Olivia')]: { grade: 50, gender: 'male'  }
     }
     
-    // how to loop over syms
+    // how to loop over symbols
     const syms = Object.getOwnPropertySymbols(classRoom);
-    console.log(syms);
+    const data = syms.map(sym => classRoom[sym]);
+    console.log(data);
   </script>
 </body>
 </html>
