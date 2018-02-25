@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symbols </title>
+</head>
+<body>
+  <script>
+    const james = Symbol('James');
+    const person = Symbol('James');
+    // if two symbols have the same value that does not make them equal 
+    // james === person // false 
+    const classRoom  = {
+
+      [Symbol('Mark')]: { grade: 50, gender: 'male' },
+      [Symbol('Olivia')]: { grade: 80, gender: 'female' },
+      [Symbol('Olivia')]: { grade: 50, gender: 'male'  }
+    }
+    
+    // how to loop over syms
+    const syms = Object.getOwnPropertySymbols(classRoom);
+    console.log(syms);
+  </script>
+</body>
+</html>
